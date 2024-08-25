@@ -1,0 +1,47 @@
+﻿@model Student_Management_System.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center my-4">Student Details</h2>
+
+<div class="border p-4 rounded shadow-sm">
+    <h4 class="mb-4 text-primary">Student Information</h4>
+    <hr class="mb-4" />
+
+    <dl class="row">
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.Section)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Section)
+        </dd>
+    </dl>
+</div>
+
+<div class="mt-4">
+    <a href="@Url.Action("Edit", new { id = Model.StudentId })" class="btn btn-primary">Edit</a>
+    <a href="@Url.Action("Index")" class="btn btn-secondary ml-2">Back to List</a>
+</div>
